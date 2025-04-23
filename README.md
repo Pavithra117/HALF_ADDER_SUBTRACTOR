@@ -22,6 +22,9 @@ Sum = A’B+AB’ =A ⊕ B Carry = AB
 
 Figure -01 HALF ADDER
 
+![Screenshot 2025-04-23 222356](https://github.com/user-attachments/assets/5114aef6-9be0-490c-b79d-24cc1925b15f)
+
+
 **Half Subtractor**
 
 The half-subtractor is a combinational circuit which is used to perform subtraction of two bits. It has two inputs, X (minuend) and Y (subtrahend) and two outputs D (difference) and B (borrow). To perform x - y, we have to check the relative magnitudes of x and y. If x ;;, y, we have three possibilities: 0 - 0 = 0, 1 - 0 = 1, and 1 - I = 0. The result is called the difference bit. If x < y, we have 0 - I, and it is necessary to borrow a 1 from the next higher stage. The I borrowed from the next higher stage adds 2 to the minuend bit, just as in the decimal system a borrow adds 10 to a minuend digit. With the minuend equal to 2, the difference becomes 2 - I = 1. The half-subtractor needs two outputs. One output generates the difference and will be designated by the symbol D. The second output, designated B for borrow, generates the binary signal that informs the next stage that a I has been borrowed. 
@@ -34,6 +37,8 @@ Borrow = A’B
 Figure -02 HALF Subtractor
 
 **Truthtable**
+
+![Screenshot 2025-04-23 222408](https://github.com/user-attachments/assets/9ecdf0c5-d4c7-4c04-872c-ad39999ac49c)
 
 **Procedure**
 
@@ -51,11 +56,37 @@ Figure -02 HALF Subtractor
 **Program:**
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
+```
+i)HALF ADDER
 
-Developed by: RegisterNumber:*/
+module ha(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum= (a ^ b);
+assign carry= ( a & b);
+endmodule
+```
+```
+ii)HALF SUBTRACTOR
+
+module hs(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+assign difference= (a ^ b);
+assign borrow= ( ~a & b);
+endmodule
+```
+Developed by:Pavitra K RegisterNumber:212224240112*/
 
 **RTL Schematic**
 
+![Screenshot 2025-04-23 221907](https://github.com/user-attachments/assets/c24c150f-cefb-412a-8cd2-b06a929fe9d4)
+![Screenshot 2025-04-23 221913](https://github.com/user-attachments/assets/d713bb0e-37a1-4c6a-bc15-be2cfb8d4bd3)
+
 **Output/TIMING Waveform**
 
+![Screenshot 2025-04-23 221848](https://github.com/user-attachments/assets/83ed7657-41ba-445a-abb8-0440c0e32d21)
+![Screenshot 2025-04-23 221856](https://github.com/user-attachments/assets/6a062bf0-8009-48be-8ec9-ed7ee932a00d)
+
 **Result:**
+This code has executed successfully
