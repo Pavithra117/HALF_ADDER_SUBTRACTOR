@@ -22,6 +22,9 @@ Sum = A’B+AB’ =A ⊕ B Carry = AB
 
 Figure -01 HALF ADDER
 
+![Screenshot 2025-04-23 222408](https://github.com/user-attachments/assets/ac04ed91-d273-46e1-a68a-bc7bc3f1e1af)
+
+
 **Half Subtractor**
 
 The half-subtractor is a combinational circuit which is used to perform subtraction of two bits. It has two inputs, X (minuend) and Y (subtrahend) and two outputs D (difference) and B (borrow). To perform x - y, we have to check the relative magnitudes of x and y. If x ;;, y, we have three possibilities: 0 - 0 = 0, 1 - 0 = 1, and 1 - I = 0. The result is called the difference bit. If x < y, we have 0 - I, and it is necessary to borrow a 1 from the next higher stage. The I borrowed from the next higher stage adds 2 to the minuend bit, just as in the decimal system a borrow adds 10 to a minuend digit. With the minuend equal to 2, the difference becomes 2 - I = 1. The half-subtractor needs two outputs. One output generates the difference and will be designated by the symbol D. The second output, designated B for borrow, generates the binary signal that informs the next stage that a I has been borrowed. 
@@ -34,6 +37,8 @@ Borrow = A’B
 Figure -02 HALF Subtractor
 
 **Truthtable**
+
+![Screenshot 2025-04-23 225810](https://github.com/user-attachments/assets/d4339283-3e8d-4e8f-be58-cf2fa6f26b95)
 
 **Procedure**
 
@@ -52,10 +57,20 @@ Figure -02 HALF Subtractor
 
 /* Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 
-Developed by: RegisterNumber:*/
+Developed by: PAVITHARA K RegisterNumber:212224240112*/
 
 **RTL Schematic**
 
+![Screenshot 2025-04-23 221907](https://github.com/user-attachments/assets/1d0f86ac-2ad5-450a-8998-49683607d68a)
+
+![Screenshot 2025-04-23 221913](https://github.com/user-attachments/assets/9d073085-fd1d-49f8-81ed-dc6d0dcf9fe0)
+
 **Output/TIMING Waveform**
 
+![Screenshot 2025-04-23 221848](https://github.com/user-attachments/assets/b0e2bc6d-3745-44ee-99e9-7a01809ecf78)
+
+![Screenshot 2025-04-23 221856](https://github.com/user-attachments/assets/d871bc08-2568-4116-bdee-45aa4918fcc1)
+
 **Result:**
+
+The code has executed successfully.
